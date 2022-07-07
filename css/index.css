@@ -218,6 +218,7 @@ input[type=text]:valid, input[type=password]:valid {
     border-bottom: 2px solid #f50856;
 } /* This is a quick fix to get an authorization / valid entry state without using JS */
 
+#login,
 input[type=submit] {
     width: 200px;
     background-color: white;
@@ -239,6 +240,7 @@ input[type=submit] {
     transition: background-color 0.2s ease-in-out;
 }
 
+#login,
 input[type=submit]:hover {
     background-color: #dddddd;
     color: #bb0642;
