@@ -3,6 +3,6 @@ button.onclick = function() {
     window.location.href = "/signin.html";
   }
 let button2 = document.getElementById("home");
-button.onclick = function() {
+button2.onclick = function() {
     window.location.href = "/index.html";
   }
