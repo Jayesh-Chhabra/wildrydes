@@ -4,5 +4,5 @@ button.onclick = function() {
   }
 let button2 = document.getElementById("home");
 button2.onclick = function() {
-    window.location.href = "/index.html";
+    window.location.href = "/ride.html";
   }
