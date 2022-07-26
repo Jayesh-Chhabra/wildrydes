@@ -241,8 +241,8 @@ input[type=submit] {
     transition: background-color 0.2s ease-in-out;
 }
 
-#home,
-#login,
+#home:hover,
+#login:hover,
 input[type=submit]:hover {
     background-color: #dddddd;
     color: #bb0642;
