@@ -1,5 +1,5 @@
 body {
-    color:rgb(125, 227, 255)
+    background-color:rgb(125, 227, 255)
 }
 header, h1 {
     display: flex;
