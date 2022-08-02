@@ -48,8 +48,8 @@ ul li {
     border: 2px solid #095776;
   
     /* Mittig */
-    top: 40%;
-    left: 60%;
+    top: 37%;
+    left: 63%;
   }
   
   .button_plus:after {
@@ -59,15 +59,15 @@ ul li {
     height: 4px;
     width: 50%;
     background: #095776;
-    top: 40%;
-    left: 60%;
+    top: 50%;
+    left: 50%;
   }
   
   .button_plus:before {
     content: '';
     position: absolute;
-    top: 40%;
-    left: 60%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #095776;
     height: 50%;
