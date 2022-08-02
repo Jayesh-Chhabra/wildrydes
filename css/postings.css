@@ -28,7 +28,7 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
-    width: 275px;
+    width: 300px;
     height: 30px;
   
     /* make the list items unselectable */
@@ -84,4 +84,14 @@ ul li {
   .button_plus:hover {
     background-color: #095776;
     transition: 0.2s;
+  }
+  .app1-icon {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+  }
+  .app2-icon {
+    position: absolute;
+    left: 75%;
+    top: 25%;
   }
