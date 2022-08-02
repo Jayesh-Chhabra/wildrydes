@@ -23,7 +23,7 @@ header, h1 {
 
 ul li {
     cursor: pointer;
-    position: relative;
+    justify-content: center;
     padding: 12px 8px 12px 40px;
     background: #eee;
     font-size: 18px;
