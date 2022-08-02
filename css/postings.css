@@ -40,35 +40,38 @@ ul li {
     background: #f9f9f9;
   }
   .button_plus {
-    top: 50%;
-    left: 50%;
+    position: absolute;
     width: 35px;
     height: 35px;
     background: #fff;
     cursor: pointer;
     border: 2px solid #095776;
   
+    /* Mittig */
+    top: 50%;
+    left: 50%;
   }
   
   .button_plus:after {
-    content: ''; 
+    content: '';
+    position: absolute;
     transform: translate(-50%, -50%);
     height: 4px;
     width: 50%;
     background: #095776;
     top: 50%;
     left: 50%;
-    
   }
   
   .button_plus:before {
     content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #095776;
     height: 50%;
     width: 4px;
-    top: 50%;
-    left: 50%;
   }
   
   .button_plus:hover:before,
