@@ -4,7 +4,14 @@ body {
 header, h1 {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    font-size: 80px;
+    color: white;
+}
+#myDIV{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
     font-size: xx-large;
     color: white;
 }
