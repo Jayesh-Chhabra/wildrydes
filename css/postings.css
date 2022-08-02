@@ -17,7 +17,8 @@ header, h1 {
     color: white;
 }
 #myInput {
-    height: 20px
+    height: 20px;
+    width: 100px;
 }
 
 ul li {
