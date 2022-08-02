@@ -23,8 +23,6 @@ header, h1 {
 
 ul li {
     cursor: pointer;
-    display: flex;
-    justify-content: center;
     padding: 12px 8px 12px 40px;
     background: #eee;
     font-size: 18px;
@@ -50,8 +48,8 @@ ul li {
     border: 2px solid #095776;
   
     /* Mittig */
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 60%;
   }
   
   .button_plus:after {
@@ -61,15 +59,15 @@ ul li {
     height: 4px;
     width: 50%;
     background: #095776;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 60%;
   }
   
   .button_plus:before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 60%;
     transform: translate(-50%, -50%);
     background: #095776;
     height: 50%;
