@@ -11,14 +11,14 @@ header, h1 {
 #myDIV{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
     margin-bottom: 50px;
     font-size: large;
     color: white;
 }
 #myInput {
     height: 20px;
-    width: 100px;
+    width: 200px;
 }
 
 ul li {
