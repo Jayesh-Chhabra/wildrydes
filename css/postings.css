@@ -5,15 +5,19 @@ header, h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    font-size: 80px;
+    font-size: 50px;
     color: white;
 }
 #myDIV{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 50px;
-    font-size: xx-large;
+    font-size: large;
     color: white;
+}
+#myInput {
+    height: 20px
 }
 
 ul li {
