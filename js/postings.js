@@ -12,7 +12,7 @@ var WildRydes = window.WildRydes || {};
         alert(error);
         window.location.href = '/signin.html';
     });
-    dbPut = function requestUnicorn(inputValue) {
+    dbPut = function(inputValue) {
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/postings',
