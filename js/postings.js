@@ -12,6 +12,27 @@ var WildRydes = window.WildRydes || {};
         alert(error);
         window.location.href = '/signin.html';
     });
+    dbPut = function requestUnicorn(inputValue) {
+        $.ajax({
+            method: 'POST',
+            url: _config.api.invokeUrl + '/postings',
+            headers: {
+                Authorization: authToken
+            },
+            data: JSON.stringify({
+                input1: {
+                    inputValue
+                }
+            }),
+            contentType: 'application/json',
+            success: completeRequest,
+            error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                console.error('Error putting input: ', textStatus, ', Details: ', errorThrown);
+                console.error('Response: ', jqXHR.responseText);
+                alert('An error occured when inputting your posting:\n' + jqXHR.responseText);
+            }
+        });
+    }
 })
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -30,7 +51,7 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("postingList").appendChild(li);
-    requestUnicorn(inputValue);
+    dbPut(inputValue);
   }
   document.getElementById("myInput").value = "";
 
@@ -46,25 +67,4 @@ function newElement() {
       div.style.display = "none";
     }
   }
-}
-function requestUnicorn(inputValue) {
-    $.ajax({
-        method: 'POST',
-        url: _config.api.invokeUrl + '/postings',
-        headers: {
-            Authorization: authToken
-        },
-        data: JSON.stringify({
-            input1: {
-                inputValue
-            }
-        }),
-        contentType: 'application/json',
-        success: completeRequest,
-        error: function ajaxError(jqXHR, textStatus, errorThrown) {
-            console.error('Error putting input: ', textStatus, ', Details: ', errorThrown);
-            console.error('Response: ', jqXHR.responseText);
-            alert('An error occured when inputting your posting:\n' + jqXHR.responseText);
-        }
-    });
 }
