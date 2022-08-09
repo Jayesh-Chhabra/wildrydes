@@ -61,10 +61,7 @@ var WildRydes = window.WildRydes || {};
         }
       }
       
-    $(function onDocReady() {
-        $('#addButton').click(function() {alert( "Handler for .click() called." )});
-        
-    });
+      $(document).on('click', '#addButton', function() { alert("hello"); });
 })
 
 // Create a new list item when clicking on the "Add" button
