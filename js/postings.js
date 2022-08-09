@@ -1,4 +1,18 @@
 // Add a "checked" symbol when clicking on a list item
+var WildRydes = window.WildRydes || {};
+(function rideScopeWrapper($) {
+    var authToken;
+    WildRydes.authToken.then(function setAuthToken(token) {
+        if (token) {
+            authToken = token;
+        } else {
+            window.location.href = '/signin.html';
+        }
+    }).catch(function handleTokenError(error) {
+        alert(error);
+        window.location.href = '/signin.html';
+    });
+})
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -16,6 +30,7 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("postingList").appendChild(li);
+    requestUnicorn(inputValue);
   }
   document.getElementById("myInput").value = "";
 
@@ -31,4 +46,25 @@ function newElement() {
       div.style.display = "none";
     }
   }
+}
+function requestUnicorn(inputValue) {
+    $.ajax({
+        method: 'POST',
+        url: _config.api.invokeUrl + '/postings',
+        headers: {
+            Authorization: authToken
+        },
+        data: JSON.stringify({
+            input1: {
+                inputValue
+            }
+        }),
+        contentType: 'application/json',
+        success: completeRequest,
+        error: function ajaxError(jqXHR, textStatus, errorThrown) {
+            console.error('Error putting input: ', textStatus, ', Details: ', errorThrown);
+            console.error('Response: ', jqXHR.responseText);
+            alert('An error occured when inputting your posting:\n' + jqXHR.responseText);
+        }
+    });
 }
