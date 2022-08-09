@@ -62,7 +62,7 @@ var WildRydes = window.WildRydes || {};
       }
       
     $(function onDocReady() {
-        $('#addButton').click(newElement);
+        $('#addButton').click(function() {alert( "Handler for .click() called." )});
         
     });
 })
